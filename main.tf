@@ -35,7 +35,7 @@ resource "null_resource" "azure-cli" {
 }
 
 output "firstValue" {
-  value = "test"
+  value = "test3"
 }
 
 # output "secondValue" {
