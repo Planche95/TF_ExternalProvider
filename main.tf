@@ -18,6 +18,22 @@ resource "null_resource" "script1" {
   }
 }
 
+resource "null_resource" "azure-cli" {
+  
+  provisioner "local-exec" {
+    # Call Azure CLI Script here
+    command = "./script.sh"
+
+    # We are going to pass in terraform derived values to the script
+    # environment {
+    #   webappname = "${azurerm_app_service.demo.name}"
+    #   resourceGroup = ${azurerm_resource_group.demo.name}
+    # }
+  }
+
+  # depends_on = ["azurerm_app_service_custom_hostname_binding.demo"]
+}
+
 # output "firstValue" {
 #   value = "${data.external.powershell_test.result.first}"
 # }
