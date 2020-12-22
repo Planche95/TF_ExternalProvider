@@ -34,9 +34,9 @@ resource "null_resource" "azure-cli" {
   # depends_on = ["azurerm_app_service_custom_hostname_binding.demo"]
 }
 
-# output "firstValue" {
-#   value = "${data.external.powershell_test.result.first}"
-# }
+output "firstValue" {
+  value = "test"
+}
 
 # output "secondValue" {
 #   value = "${data.external.powershell_test.result.second}"
