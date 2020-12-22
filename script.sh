@@ -1,1 +1,3 @@
-az find secret
+printf “hello printf”
+env
+printf env
