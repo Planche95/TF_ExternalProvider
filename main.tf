@@ -23,7 +23,7 @@ resource "null_resource" "azure-cli" {
   provisioner "local-exec" {
     # Call Azure CLI Script here
     command = "./script.sh"
-
+    interpreter = "/bin/sh"
     # We are going to pass in terraform derived values to the script
     # environment {
     #   webappname = "${azurerm_app_service.demo.name}"
