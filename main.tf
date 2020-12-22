@@ -10,13 +10,13 @@ variable "someString" {}
 #   }
 # }
 
-resource "null_resource" "script1" {
-  provisioner "local-exec" {
-    command = "./testScript.ps1"
+# resource "null_resource" "script1" {
+#   provisioner "local-exec" {
+#     command = "./testScript.ps1"
 
-  interpreter = ["PowerShell", "-File"]
-  }
-}
+#   interpreter = ["PowerShell", "-File"]
+#   }
+# }
 
 resource "null_resource" "azure-cli" {
   
